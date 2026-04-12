@@ -15,6 +15,7 @@ export function NavBar() {
   const navigate = useNavigate();
   const isHome = pathname === '/';
   const [visible, setVisible] = useState(!isHome);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     if (!isHome) { setVisible(true); return; }
@@ -27,8 +28,18 @@ export function NavBar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, [isHome]);
 
+  // Close menu on route change
+  useEffect(() => { setMenuOpen(false); }, [pathname]);
+
+  // Lock body scroll when menu is open
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [menuOpen]);
+
   const handleNaamam = (e) => {
     e.preventDefault();
+    setMenuOpen(false);
     if (isHome) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
@@ -37,40 +48,80 @@ export function NavBar() {
   };
 
   return (
-    <nav
-      className="fixed top-0 left-0 right-0 z-50 px-4 md:px-8 py-2 flex items-center justify-between transition-all duration-500"
-      style={{
-        background: visible ? 'rgba(44, 18, 0, 0.95)' : 'transparent',
-        backdropFilter: visible ? 'blur(8px)' : 'none',
-        opacity: visible ? 1 : 0,
-        pointerEvents: visible ? 'auto' : 'none',
-        transform: visible ? 'translateY(0)' : 'translateY(-100%)',
-      }}
-    >
-      <a
-        href="/"
-        onClick={handleNaamam}
-        className="hover:opacity-80 transition-opacity duration-300"
-        aria-label="Home"
+    <>
+      <nav
+        className="fixed top-0 left-0 right-0 z-50 px-4 md:px-8 py-2 flex items-center justify-between transition-all duration-500"
+        style={{
+          background: visible ? 'rgba(44, 18, 0, 0.95)' : 'transparent',
+          backdropFilter: visible ? 'blur(8px)' : 'none',
+          opacity: visible ? 1 : 0,
+          pointerEvents: visible ? 'auto' : 'none',
+          transform: visible ? 'translateY(0)' : 'translateY(-100%)',
+        }}
       >
-        <NamamIcon />
-      </a>
+        <a
+          href="/"
+          onClick={handleNaamam}
+          className="hover:opacity-80 transition-opacity duration-300"
+          aria-label="Home"
+        >
+          <NamamIcon />
+        </a>
 
-      <div className="flex items-center gap-4 md:gap-6">
-        <Link
-          to="/ceremony"
-          className={`text-xs md:text-sm uppercase tracking-[0.15em] transition-colors duration-300 ${pathname === '/ceremony' ? 'text-saffron-300' : 'text-saffron-400/50 hover:text-saffron-300'}`}
+        {/* Desktop links */}
+        <div className="hidden md:flex items-center gap-6">
+          <Link
+            to="/ceremony"
+            className={`text-sm uppercase tracking-[0.15em] transition-colors duration-300 ${pathname === '/ceremony' ? 'text-saffron-300' : 'text-saffron-400/50 hover:text-saffron-300'}`}
+          >
+            The Ceremony
+          </Link>
+          <span className="text-saffron-400/20">·</span>
+          <Link
+            to="/gayatri"
+            className={`text-sm uppercase tracking-[0.15em] transition-colors duration-300 ${pathname === '/gayatri' ? 'text-saffron-300' : 'text-saffron-400/50 hover:text-saffron-300'}`}
+          >
+            The Mantra
+          </Link>
+        </div>
+
+        {/* Mobile hamburger */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="md:hidden flex flex-col justify-center gap-[5px] w-7 h-7"
+          aria-label="Menu"
         >
-          The Ceremony
-        </Link>
-        <span className="text-saffron-400/20">·</span>
-        <Link
-          to="/gayatri"
-          className={`text-xs md:text-sm uppercase tracking-[0.15em] transition-colors duration-300 ${pathname === '/gayatri' ? 'text-saffron-300' : 'text-saffron-400/50 hover:text-saffron-300'}`}
-        >
-          The Mantra
-        </Link>
+          <span className={`block h-[1.5px] bg-saffron-300/70 transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-[6.5px]' : ''}`} />
+          <span className={`block h-[1.5px] bg-saffron-300/70 transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
+          <span className={`block h-[1.5px] bg-saffron-300/70 transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-[6.5px]' : ''}`} />
+        </button>
+      </nav>
+
+      {/* Mobile fullscreen overlay */}
+      <div
+        className={`fixed inset-0 z-40 flex flex-col items-center justify-center transition-all duration-400 md:hidden ${menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+        style={{ background: 'rgba(44, 18, 0, 0.98)' }}
+      >
+        <div className="flex flex-col items-center gap-10">
+          <Link
+            to="/ceremony"
+            onClick={() => setMenuOpen(false)}
+            className={`text-2xl font-serif font-light uppercase tracking-[0.2em] transition-colors duration-300 ${pathname === '/ceremony' ? 'text-saffron-300' : 'text-saffron-100/60 hover:text-saffron-300'}`}
+          >
+            The Ceremony
+          </Link>
+
+          <div className="w-8 h-px bg-kumkum-500/30" />
+
+          <Link
+            to="/gayatri"
+            onClick={() => setMenuOpen(false)}
+            className={`text-2xl font-serif font-light uppercase tracking-[0.2em] transition-colors duration-300 ${pathname === '/gayatri' ? 'text-saffron-300' : 'text-saffron-100/60 hover:text-saffron-300'}`}
+          >
+            The Mantra
+          </Link>
+        </div>
       </div>
-    </nav>
+    </>
   );
 }
