@@ -37,7 +37,7 @@ const vishwamitraChapters = [
       'Then one afternoon, he rode into the hermitage of the sage Vasishtha.',
       'What happened there is told differently in different texts, but the core of it is always the same: Kaushika witnessed something in that quiet forest clearing that his kingdom, his armies, and his name could not explain. A peace. A power of a different order entirely. Not the power to command men — but the power to need nothing from them.',
       'He tried to take it by force first. That was the king in him. He failed completely.',
-      'So he did the most radical thing a powerful man can do. He put down his crown and walked into the forest as a student.',
+      'So he did the most radical thing a powerful man can do. He became a beginner. Not as a phase. Not as a strategy. As a complete surrender of everything the world had confirmed he was.',
     ],
   },
   {

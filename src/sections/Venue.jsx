@@ -51,27 +51,9 @@ export function Venue() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="text-saffron-950/50 italic text-base leading-relaxed max-w-lg mx-auto"
         >
-          Please arrive by 7:30 AM to join us for breakfast. The Muhurta is at 9:30 and we would love for you to witness it.
+          Please arrive by 7:30 AM to join us for breakfast. The Muhurta is at 9:30 and we would love for you to witness it. Lunch and celebrations at 12:30 PM.
         </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="pt-8 border-t border-kumkum-500/15"
-        >
-          <p className="text-sm uppercase tracking-widest text-saffron-950/40 mb-2">For any questions</p>
-          <p className="text-xl font-serif font-light text-saffron-950">
-            {eventData.venue.contact.name}
-          </p>
-          <a
-            href={`tel:${eventData.venue.contact.phone}`}
-            className="text-saffron-500 hover:text-saffron-600 transition-colors text-lg"
-          >
-            {eventData.venue.contact.phone}
-          </a>
-        </motion.div>
       </div>
     </section>
   );

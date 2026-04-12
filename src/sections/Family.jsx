@@ -76,20 +76,6 @@ export function Family() {
           ))}
         </motion.div>
 
-        {/* Cousins */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-center space-y-3"
-        >
-          <p className="text-sm uppercase tracking-[0.3em] text-saffron-400/50">His companions in childhood and beyond</p>
-          <p className="text-lg font-serif font-light text-saffron-100/70">
-            {eventData.family.cousins.map(c => c.name).join(' & ')}
-          </p>
-          <p className="text-saffron-100/30 italic text-sm">Growing up alongside him — the gift of cousins who become brothers.</p>
-        </motion.div>
       </div>
     </section>
   );

@@ -3,6 +3,7 @@
 ## Section 1: Hero
 
 **What they see first:**
+
 ```
                             🕉️
                         [divider line]
@@ -31,6 +32,7 @@
 ## Section 2: About
 
 **What they learn:**
+
 ```
         THE BRAHMOPADESHAM CEREMONY
 Sacred transformation into Vedic learning
@@ -51,11 +53,11 @@ Sacred transformation into Vedic learning
         [Sacred significance paragraph]
 
         THE HEART OF VEDIC WISDOM
-    
+
         ॐ भूर्भुवः स्वः। तत्सवितुर्वरेण्यम्...
-    
+
         Om Bhur Bhuvah Svah...
-    
+
         "We meditate on the divine radiance..."
 ```
 
@@ -70,6 +72,7 @@ Sacred transformation into Vedic learning
 ## Section 3: Schedule
 
 **What they need to know:**
+
 ```
                   THE SACRED DAY
          Thursday, April 23, 2026
@@ -90,7 +93,7 @@ Sacred transformation into Vedic learning
             No 8, Dattatreya Road,
             Gandhi Bazaar, Basavanagudi
             Bengaluru, Karnataka 560004
-            
+
                 PLEASE NOTE
             • Arrive 15 minutes early
             • Traditional attire appreciated
@@ -109,6 +112,7 @@ Sacred transformation into Vedic learning
 ## Section 4: Family
 
 **What they see:**
+
 ```
                     THE FAMILY
             Blessed by generations of wisdom
@@ -118,7 +122,7 @@ Sacred transformation into Vedic learning
     • Shreyas Ananth    |    • Ananth S
     • Preethi Shreyas   |    • Geetha Ananth
                         |    • Late ShivaPrakash JD
-                        |    • Late Uma ShivaPrakash JD
+                        |    •  Uma ShivaPrakash
 
     WITH BLESSINGS FROM |    COUSINS & COMPANIONS
     • Shruthi Sridharan |    • Vihaan Desai
@@ -142,6 +146,7 @@ Sacred transformation into Vedic learning
 ## Section 5: Closing
 
 **What they feel:**
+
 ```
                     🕉️
                 [divider line]
@@ -185,6 +190,7 @@ Sacred transformation into Vedic learning
 ## The Full Journey
 
 ### **Scroll Experience**
+
 ```
 HOME (Black)
     ↓ [fade in, float up]
@@ -198,6 +204,7 @@ CLOSING (Black) - Blessing and peace
 ```
 
 ### **Color Flow**
+
 - Black (sacred, introspective)
 - → Black (learning)
 - → White (clarity for logistics)
@@ -205,6 +212,7 @@ CLOSING (Black) - Blessing and peace
 - → Black (meditation, conclusion)
 
 ### **Typography Flow**
+
 - Large, breathing title
 - → Medium headings with content
 - → Practical, organized information
@@ -216,6 +224,7 @@ CLOSING (Black) - Blessing and peace
 ## Responsive Experience
 
 ### **On Mobile (320px)**
+
 - Full-width, single column
 - Large, readable fonts
 - Padding for comfortable reading
@@ -223,12 +232,14 @@ CLOSING (Black) - Blessing and peace
 - Optimized touch interactions
 
 ### **On Tablet (640px)**
+
 - Two-column layouts where appropriate
 - Family grid becomes visible
 - Larger fonts remain comfortable
 - More whitespace
 
 ### **On Desktop (1024px+)**
+
 - Full breathing room
 - Max-width containers (56rem)
 - Generous padding
@@ -240,12 +251,14 @@ CLOSING (Black) - Blessing and peace
 ## Key Interactions
 
 ### **Scroll Reveals**
+
 - Elements fade in as they appear
 - Subtle upward float (y: 20 to 0)
 - Staggered timing creates rhythm
 - Never jarring or disorienting
 
 ### **The Temple Bell**
+
 - Available in Closing section
 - Optional interaction (user-triggered)
 - Synthesized authentic sound
@@ -253,6 +266,7 @@ CLOSING (Black) - Blessing and peace
 - Creates emotional connection
 
 ### **Navigation Flow**
+
 - Scroll snap keeps sections aligned
 - Smooth scroll behavior throughout
 - Each section clearly marked
@@ -263,25 +277,30 @@ CLOSING (Black) - Blessing and peace
 ## Emotional Beats
 
 ### **Hero → "Wait, this feels sacred"**
+
 - Darkness, OM symbol, breathing space
 - Immediately conveys reverence
 
 ### **About → "I understand the meaning"**
+
 - Timeline of rituals feels like journey
 - Gayatri Mantra as climax
 - Sacred knowledge takes center stage
 
 ### **Schedule → "I know what to do"**
+
 - White background = practical mode
 - Clear information, no confusion
 - Organized and helpful
 
 ### **Family → "I'm part of something bigger"**
+
 - Dark background returns
 - Simple organization honors lineage
 - Sense of ancestral blessing
 
 ### **Closing → "This is sacred and beautiful"**
+
 - "Your Presence Is Blessed"
 - Sanskrit wisdom
 - Peaceful conclusion
@@ -292,22 +311,26 @@ CLOSING (Black) - Blessing and peace
 ## What Makes It Special
 
 ✨ **Not flashy, but stunning**
+
 - No 3D effects, no spinning orbs
 - Clean, elegant, timeless design
 - Beauty through simplicity
 
 ✨ **Sacred, not celebratory**
+
 - Respects the ceremony's true nature
 - Contemplative atmosphere
 - Reverent tone throughout
 
 ✨ **Fast and accessible**
+
 - 350 KB bundle (not 1.3 MB)
 - Works on all devices
 - High contrast for readability
 - No motion sickness triggers
 
 ✨ **Personal and inclusive**
+
 - Family celebrated equally
 - Clear information for all
 - Welcoming tone throughout
@@ -331,4 +354,4 @@ That's the goal. Not entertainment, but **transformation of understanding.**
 
 **Hari Om Tat Sat** 🕉️
 
-*This is how guests experience Deva's sacred moment.*
+_This is how guests experience Deva's sacred moment._

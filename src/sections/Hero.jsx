@@ -21,8 +21,8 @@ export function Hero() {
 		try { const c = document.createElement('canvas'); return !!(c.getContext('webgl') || c.getContext('experimental-webgl')); }
 		catch { return false; }
 	});
-	const [introDone, setIntroDone] = useState(false);
-	const [countdown, setCountdown] = useState(INTRO_DURATION);
+	const [introDone, setIntroDone] = useState(() => sessionStorage.getItem('introDone') === '1');
+	const [countdown, setCountdown] = useState(() => sessionStorage.getItem('introDone') === '1' ? 0 : INTRO_DURATION);
 
 	// Lock scroll during intro
 	useEffect(() => {
@@ -45,6 +45,7 @@ export function Hero() {
 				if (prev <= 1) {
 					clearInterval(tick);
 					setIntroDone(true);
+					sessionStorage.setItem('introDone', '1');
 					return 0;
 				}
 				return prev - 1;
@@ -89,7 +90,7 @@ export function Hero() {
 			{/* Skip intro button (dev hotkey) */}
 			{!introDone && (
 				<button
-					onClick={() => setIntroDone(true)}
+					onClick={() => { setIntroDone(true); sessionStorage.setItem('introDone', '1'); }}
 					className='fixed top-4 right-4 z-50 text-[10px] uppercase tracking-widest px-3 py-1 rounded border transition-opacity hover:opacity-100'
 					style={{
 						color: 'rgba(212,176,102,0.5)',
