@@ -4,21 +4,17 @@ export const rituals = [
     description: 'The ceremony opens with the consecration of sacred water through Vedic hymns. This water is then sprinkled on all people and the space, purifying everything and everyone before the divine work begins. Nothing sacred can begin in an unpurified space.',
   },
   {
-    name: 'Nandi Shraddham',
-    description: 'Offerings are made to the ancestors across three generations. They are not merely remembered — they are formally invited. The ceremony becomes a gathering across time: the living, the departed, and the yet-to-be-born, all present in one moment.',
-  },
-  {
     name: 'Ganapathi Homam',
     description: 'Sacred fire is kindled. Oblations are offered to Ganesha, the lord of all beginnings and the guardian of thresholds. Without his blessing, no crossing is complete.',
-  },
-  {
-    name: 'Choulam — The Tonsure',
-    description: "The boy's head is ceremonially shaved. This is the shedding of childhood karma — everything accumulated in the years of unconscious living is released. A small Shikha is left, marking his new identity. He is no longer simply a child. He is becoming something more.",
   },
   {
     name: 'Matru Bhojana',
     description: 'Before he crosses the threshold into Brahmacharya, the boy shares a final meal with his mother — eating from her hands one last time as her child. This is among the most tender moments of the entire ceremony. She feeds him as she did when he was an infant. Both know, quietly, that something is ending. Something larger is beginning.',
     highlight: true,
+  },
+  {
+    name: 'Choulam — The Tonsure',
+    description: "The boy's head is ceremonially shaved. This is the shedding of childhood karma — everything accumulated in the years of unconscious living is released. A small Shikha is left, marking his new identity. He is no longer simply a child. He is becoming something more.",
   },
   {
     name: 'Yajnopavita Dharanam',
@@ -37,10 +33,6 @@ export const rituals = [
   {
     name: 'Samidhadanam',
     description: 'He offers his first oblation of sacred wood into the fire. His first act as a student of the Vedas is not to receive — it is to give. To the fire. To the cosmos.',
-  },
-  {
-    name: 'Kashi Yatra',
-    description: 'Dressed as a pilgrim, staff in hand, the boy sets off for Kashi to pursue knowledge. His maternal uncle intercepts him and offers him something the Vedas cannot — love, family, home. The boy is persuaded to stay. The entire community laughs and weeps at once. It is the oldest play in the tradition, and it never loses its power.',
   },
   {
     name: 'Bhiksha Vandana',

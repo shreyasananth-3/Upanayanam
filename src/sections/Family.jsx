@@ -14,13 +14,14 @@ export function Family() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: false }}
           transition={{ duration: 1 }}
-          className="text-center space-y-4"
+          className="text-center space-y-8"
         >
           <h2 className="text-4xl md:text-6xl font-serif font-light text-saffron-100">
-            With Love Across Generations
+            Grace Us With Your Presence
           </h2>
-          <p className="text-saffron-300 italic text-lg">
-            This ceremony is not the beginning of a lineage. It is the continuation of one.
+          <p className="text-xl md:text-2xl font-serif font-light text-saffron-100/70 leading-relaxed">
+            <span className="text-saffron-300">Ananth's family</span> humbly requests you and your family to come and bless our child
+            as he steps into the light of the Vedas and becomes <span className="text-saffron-300 italic">Dvija</span> — twice-born.
           </p>
         </motion.div>
 
@@ -46,7 +47,7 @@ export function Family() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-center space-y-3"
         >
-          <p className="text-sm uppercase tracking-[0.3em] text-saffron-400/50">Blessed by his grandparents</p>
+          <p className="text-sm uppercase tracking-[0.3em] text-saffron-400/50">Blessed by</p>
           <p className="text-xl font-serif font-light text-saffron-100/80">
             {eventData.family.grandparents.map(g => g.name).join(' & ')}
           </p>

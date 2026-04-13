@@ -322,8 +322,8 @@ export function Hero() {
 					</motion.div>
 
 					<motion.p
-						className='font-light'
-						style={{ color: 'rgba(200,180,140,0.45)', fontSize: 'clamp(0.75rem, 1.8vw, 1rem)' }}
+						className='font-normal tracking-wide'
+						style={{ color: 'rgba(212,176,102,0.55)', fontSize: 'clamp(0.8rem, 1.8vw, 1.05rem)' }}
 						{...r(2.2)}
 						animate={a()}
 					>
@@ -368,11 +368,11 @@ export function Hero() {
 						>
 							<span
 								className='uppercase tracking-[0.4em] font-light'
-								style={{ color: 'rgba(180,170,150,0.30)', fontSize: 'clamp(0.45rem, 1vw, 0.6rem)' }}
+								style={{ color: 'rgba(212,176,102,0.75)', fontSize: 'clamp(0.55rem, 1.2vw, 0.7rem)' }}
 							>
 								Scroll
 							</span>
-							<span style={{ color: 'rgba(180,170,150,0.25)', fontSize: 'clamp(0.75rem, 1.5vw, 0.875rem)' }}>
+							<span style={{ color: 'rgba(212,176,102,0.70)', fontSize: 'clamp(1rem, 1.8vw, 1.15rem)' }}>
 								↓
 							</span>
 						</motion.div>
