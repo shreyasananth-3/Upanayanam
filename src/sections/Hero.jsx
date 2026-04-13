@@ -312,12 +312,12 @@ export function Hero() {
 							className='font-serif font-normal leading-none'
 							style={{
 								color: '#d4b066',
-								fontSize: 'clamp(2.5rem, 8vw, 6rem)',
+								fontSize: 'clamp(2rem, 7vw, 5rem)',
 								textShadow:
 									'0 0 30px rgba(212,176,102,0.35), 0 0 60px rgba(212,176,102,0.18), 0 0 110px rgba(180,140,60,0.08)',
 							}}
 						>
-							Deva
+							Chi. Deva
 						</h2>
 					</motion.div>
 
