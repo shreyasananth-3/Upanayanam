@@ -26,19 +26,13 @@ export const eventData = {
 			time: '7:30 AM',
 			event: 'Doors Open',
 			description:
-				'Breakfast and morning prasadam. The day begins with the warmth of gathered family.',
-		},
-		{
-			time: '8:30 AM',
-			event: 'Punyahavachanam · Nandi Shraddham · Ganapathi Homam',
-			description:
-				'The space is purified. The ancestors are invited. The fire is kindled.',
+				'Breakfast. The day begins with the warmth of gathered family.',
 		},
 		{
 			time: '9:30 AM',
 			event: 'The Muhurta Begins',
 			description:
-				'The priests have chosen this window carefully. The planets are aligned. The moment is auspicious. Everything that follows happens within this sacred hour.',
+				'We gather in stillness — waiting for the blessings of the Divine to enter our family.',
 			highlight: true,
 		},
 		{
@@ -50,9 +44,9 @@ export const eventData = {
 		},
 		{
 			time: '11:00 AM',
-			event: 'Surya Darshanam · Samidhadanam · Kashi Yatra · Bhiksha Vandana',
+			event: 'Surya Darshanam · Samidhadanam · Bhiksha Vandana',
 			description:
-				'The newly initiated student meets the sun, offers his first oblation, attempts his pilgrimage, and begs his first alms.',
+				'The newly initiated student meets the sun, offers his first oblation, and begs his first alms.',
 		},
 		{
 			time: '12:30 PM',

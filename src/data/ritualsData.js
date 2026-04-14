@@ -4,10 +4,6 @@ export const rituals = [
     description: 'The ceremony opens with the consecration of sacred water through Vedic hymns. This water is then sprinkled on all people and the space, purifying everything and everyone before the divine work begins. Nothing sacred can begin in an unpurified space.',
   },
   {
-    name: 'Ganapathi Homam',
-    description: 'Sacred fire is kindled. Oblations are offered to Ganesha, the lord of all beginnings and the guardian of thresholds. Without his blessing, no crossing is complete.',
-  },
-  {
     name: 'Matru Bhojana',
     description: 'Before he crosses the threshold into Brahmacharya, the boy shares a final meal with his mother — eating from her hands one last time as her child. This is among the most tender moments of the entire ceremony. She feeds him as she did when he was an infant. Both know, quietly, that something is ending. Something larger is beginning.',
     highlight: true,

@@ -30,12 +30,12 @@ export function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="space-y-1 text-saffron-100/30 text-sm"
+          className="space-y-1 text-saffron-100/70 text-sm"
         >
-          <p className="font-serif font-light text-base text-saffron-100/40">
-            Brahmopadesham of Deva
+          <p className="font-serif font-light text-lg text-saffron-300">
+            Brahmopadesham of Chi. Deva
           </p>
-          <p>April 23, 2026 · Bangalore</p>
+          <p className="text-saffron-100/60">April 23, 2026 · Bangalore</p>
         </motion.div>
       </div>
     </section>
