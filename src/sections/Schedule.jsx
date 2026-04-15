@@ -48,9 +48,14 @@ export function Schedule() {
                 <h3 className={`text-lg md:text-xl font-serif font-light mb-1 ${item.highlight ? 'text-saffron-950 font-normal' : 'text-saffron-950/80'}`}>
                   {item.event}
                 </h3>
-                <p className="text-saffron-950/60 leading-relaxed text-sm md:text-base">
-                  {item.description}
-                </p>
+                {Array.isArray(item.description)
+                  ? item.description.map((para, i) => (
+                      <p key={i} className={`text-saffron-950/60 leading-relaxed text-sm md:text-base ${i > 0 ? 'mt-2' : ''}`}>
+                        {para}
+                      </p>
+                    ))
+                  : <p className="text-saffron-950/60 leading-relaxed text-sm md:text-base">{item.description}</p>
+                }
               </div>
             </motion.div>
           ))}
