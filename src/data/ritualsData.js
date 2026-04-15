@@ -5,7 +5,7 @@ export const rituals = [
   },
   {
     name: 'Matru Bhojana',
-    description: 'Before he crosses the threshold into Brahmacharya, the boy shares a final meal with his mother — eating from her hands one last time as her child. This is among the most tender moments of the entire ceremony. She feeds him as she did when he was an infant. Both know, quietly, that something is ending. Something larger is beginning.',
+    description: 'The boy shares a meal with his mother, eating from her hands as he has always done as her child. Tender and unhurried. The ceremony has begun, but here, for a moment, he is simply her son.',
     highlight: true,
   },
   {

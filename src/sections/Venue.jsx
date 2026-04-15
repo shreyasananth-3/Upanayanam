@@ -51,7 +51,7 @@ export function Venue() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="text-saffron-950/50 italic text-base leading-relaxed max-w-lg mx-auto"
         >
-          Please arrive by 7:30 AM to join us for breakfast. The Muhurta is at 9:30 and we would love for you to witness it. Lunch and celebrations at 12:30 PM.
+          Please arrive by 7:30 AM to join us for breakfast. The Muhurta is at 9:30 and we would appreciate your presence to witness it. Lunch and celebrations at 12:30 PM.
         </motion.p>
 
       </div>

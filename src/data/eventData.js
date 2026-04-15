@@ -26,7 +26,7 @@ export const eventData = {
 			time: '7:30 AM',
 			event: 'Matru Bhojana',
 			description:
-				'The boy shares a final meal with his mother — eating from her hands one last time as her child.',
+				'The boy shares a meal with his mother, eating from her hands as he has always done as her child.',
 		},
 		{
 			time: '8:00 AM',
@@ -44,7 +44,7 @@ export const eventData = {
 			time: '10:30 AM',
 			event: 'Brahmopadesham',
 			description:
-				'The cloth is drawn. The mantra is whispered. The boy becomes Dvija.',
+				'The cloth is drawn. The Gayatri Mantra is whispered. The boy becomes Dvija.',
 			highlight: true,
 		},
 		{
