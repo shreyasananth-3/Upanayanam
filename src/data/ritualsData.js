@@ -5,7 +5,7 @@ export const rituals = [
   },
   {
     name: 'Matru Bhojana',
-    description: 'The boy shares a meal with his mother, eating from her hands as he has always done as her child. Tender and unhurried. The ceremony has begun, but here, for a moment, he is simply her son.',
+    description: 'She is his first guru. Before any priest, before any mantra, it was her voice that taught him, her hands that fed him, her presence that made him feel safe in the world. In this ritual, the boy sits with his mother and eats from her hands — as her child, as he always has. It is a celebration of everything she has given him, and a joyful blessing as he steps forward — into the Vedas, into the light of Gayatri, into the life she always knew he was ready for.',
     highlight: true,
   },
   {

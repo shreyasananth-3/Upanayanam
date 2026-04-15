@@ -26,7 +26,7 @@ export const eventData = {
 			time: '7:30 AM',
 			event: 'Matru Bhojana',
 			description:
-				'The boy shares a meal with his mother, eating from her hands as he has always done as her child.',
+				'The boy shares a meal with his mother, eating from her hands as he has always done as her child. There is laughter, there is warmth, there is love.',
 		},
 		{
 			time: '8:00 AM',
