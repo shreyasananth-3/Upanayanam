@@ -356,10 +356,13 @@ export function Hero() {
 						</a>
 					</motion.div>
 
-					<motion.div
+					<motion.button
+						onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
 						initial={{ opacity: 0 }}
 						animate={introDone ? { opacity: 1 } : { opacity: 0 }}
 						transition={{ duration: 1.2, delay: 4 }}
+						className='cursor-pointer bg-transparent border-0 p-2'
+						aria-label='Scroll to next section'
 					>
 						<motion.div
 							className='flex flex-col items-center gap-1'
@@ -376,7 +379,7 @@ export function Hero() {
 								↓
 							</span>
 						</motion.div>
-					</motion.div>
+					</motion.button>
 				</div>
 			</div>
 		</section>

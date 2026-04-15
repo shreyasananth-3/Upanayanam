@@ -14,18 +14,24 @@ export function NavBar() {
   const { pathname } = useLocation();
   const navigate = useNavigate();
   const isHome = pathname === '/';
-  const [visible, setVisible] = useState(!isHome);
+  const introAlreadyDone = typeof window !== 'undefined' && sessionStorage.getItem('introDone') === '1';
+  const [visible, setVisible] = useState(!isHome || introAlreadyDone);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     if (!isHome) { setVisible(true); return; }
 
-    const onScroll = () => {
-      setVisible(window.scrollY > window.innerHeight * 0.8);
+    // Poll for introDone (Hero sets it in sessionStorage when intro finishes or is skipped)
+    const check = () => {
+      if (sessionStorage.getItem('introDone') === '1') {
+        setVisible(true);
+        return true;
+      }
+      return false;
     };
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    if (check()) return;
+    const id = setInterval(() => { if (check()) clearInterval(id); }, 300);
+    return () => clearInterval(id);
   }, [isHome]);
 
   // Close menu on route change
@@ -52,8 +58,8 @@ export function NavBar() {
       <nav
         className="fixed top-0 left-0 right-0 z-50 px-4 md:px-8 py-2 flex items-center justify-between transition-all duration-500"
         style={{
-          background: visible ? 'rgba(44, 18, 0, 0.95)' : 'transparent',
-          backdropFilter: visible ? 'blur(8px)' : 'none',
+          background: isHome ? 'transparent' : 'rgba(44, 18, 0, 0.95)',
+          backdropFilter: isHome ? 'none' : 'blur(8px)',
           opacity: visible ? 1 : 0,
           pointerEvents: visible ? 'auto' : 'none',
           transform: visible ? 'translateY(0)' : 'translateY(-100%)',
@@ -68,45 +74,38 @@ export function NavBar() {
           <NamamIcon />
         </a>
 
-        {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-6">
-          <Link
-            to="/ceremony"
-            className={`text-sm uppercase tracking-[0.15em] transition-colors duration-300 ${pathname === '/ceremony' ? 'text-saffron-300' : 'text-saffron-400/50 hover:text-saffron-300'}`}
-          >
-            The Ceremony
-          </Link>
-          <span className="text-saffron-400/20">·</span>
-          <Link
-            to="/gayatri"
-            className={`text-sm uppercase tracking-[0.15em] transition-colors duration-300 ${pathname === '/gayatri' ? 'text-saffron-300' : 'text-saffron-400/50 hover:text-saffron-300'}`}
-          >
-            The Gayatri Mantra
-          </Link>
-        </div>
-
-        {/* Mobile hamburger */}
+        {/* Hamburger — all breakpoints */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden flex flex-col justify-center gap-[5px] w-7 h-7"
+          className="flex flex-col justify-center gap-[6px] w-10 h-10 items-center rounded-md"
           aria-label="Menu"
+          aria-expanded={menuOpen}
         >
-          <span className={`block h-[1.5px] bg-saffron-300/70 transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-[6.5px]' : ''}`} />
-          <span className={`block h-[1.5px] bg-saffron-300/70 transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
-          <span className={`block h-[1.5px] bg-saffron-300/70 transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-[6.5px]' : ''}`} />
+          <span className={`block h-[2px] w-6 bg-saffron-300 transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-[8px]' : ''}`} />
+          <span className={`block h-[2px] w-6 bg-saffron-300 transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
+          <span className={`block h-[2px] w-6 bg-saffron-300 transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-[8px]' : ''}`} />
         </button>
       </nav>
 
-      {/* Mobile fullscreen overlay */}
+      {/* Fullscreen overlay — all breakpoints, z-60 to cover nav */}
       <div
-        className={`fixed inset-0 z-40 flex flex-col items-center justify-center transition-all duration-400 md:hidden ${menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
-        style={{ background: 'rgba(44, 18, 0, 0.98)' }}
+        className={`fixed inset-0 z-[60] flex flex-col items-center justify-center transition-opacity duration-300 ${menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+        style={{ background: '#2C1200' }}
       >
+        {/* Close button */}
+        <button
+          onClick={() => setMenuOpen(false)}
+          className="absolute top-3 right-4 flex flex-col justify-center gap-[6px] w-10 h-10 items-center rounded-md"
+          aria-label="Close menu"
+        >
+          <span className="block h-[2px] w-6 bg-saffron-300 rotate-45 translate-y-[1px]" />
+          <span className="block h-[2px] w-6 bg-saffron-300 -rotate-45 -translate-y-[1px]" />
+        </button>
         <div className="flex flex-col items-center gap-10">
           <Link
             to="/ceremony"
             onClick={() => setMenuOpen(false)}
-            className={`text-2xl font-serif font-light uppercase tracking-[0.2em] transition-colors duration-300 ${pathname === '/ceremony' ? 'text-saffron-300' : 'text-saffron-100/60 hover:text-saffron-300'}`}
+            className={`text-2xl md:text-3xl font-serif font-light uppercase tracking-[0.2em] transition-colors duration-300 ${pathname === '/ceremony' ? 'text-saffron-300' : 'text-saffron-100/60 hover:text-saffron-300'}`}
           >
             The Ceremony
           </Link>
@@ -116,7 +115,7 @@ export function NavBar() {
           <Link
             to="/gayatri"
             onClick={() => setMenuOpen(false)}
-            className={`text-2xl font-serif font-light uppercase tracking-[0.2em] transition-colors duration-300 ${pathname === '/gayatri' ? 'text-saffron-300' : 'text-saffron-100/60 hover:text-saffron-300'}`}
+            className={`text-2xl md:text-3xl font-serif font-light uppercase tracking-[0.2em] transition-colors duration-300 ${pathname === '/gayatri' ? 'text-saffron-300' : 'text-saffron-100/60 hover:text-saffron-300'}`}
           >
             The Gayatri Mantra
           </Link>
