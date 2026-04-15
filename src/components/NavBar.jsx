@@ -81,7 +81,7 @@ export function NavBar() {
             to="/gayatri"
             className={`text-sm uppercase tracking-[0.15em] transition-colors duration-300 ${pathname === '/gayatri' ? 'text-saffron-300' : 'text-saffron-400/50 hover:text-saffron-300'}`}
           >
-            The Mantra
+            The Gayatri Mantra
           </Link>
         </div>
 
@@ -118,7 +118,7 @@ export function NavBar() {
             onClick={() => setMenuOpen(false)}
             className={`text-2xl font-serif font-light uppercase tracking-[0.2em] transition-colors duration-300 ${pathname === '/gayatri' ? 'text-saffron-300' : 'text-saffron-100/60 hover:text-saffron-300'}`}
           >
-            The Mantra
+            The Gayatri Mantra
           </Link>
         </div>
       </div>

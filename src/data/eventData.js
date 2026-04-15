@@ -24,9 +24,14 @@ export const eventData = {
 	schedule: [
 		{
 			time: '7:30 AM',
-			event: 'Doors Open',
+			event: 'Matru Bhojana',
 			description:
-				'Breakfast. The day begins with the warmth of gathered family.',
+				'The boy shares a final meal with his mother — eating from her hands one last time as her child.',
+		},
+		{
+			time: '8:00 AM',
+			event: 'Breakfast',
+			description: 'The day begins with the warmth of gathered family.',
 		},
 		{
 			time: '9:30 AM',
