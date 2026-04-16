@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useLang } from '../context/LanguageContext';
 
 function NamamIcon() {
   return (
@@ -13,6 +14,7 @@ function NamamIcon() {
 export function NavBar() {
   const { pathname } = useLocation();
   const navigate = useNavigate();
+  const { lang, toggleLang } = useLang();
   const isHome = pathname === '/';
   const introAlreadyDone = typeof window !== 'undefined' && sessionStorage.getItem('introDone') === '1';
   const [visible, setVisible] = useState(!isHome || introAlreadyDone);
@@ -73,6 +75,16 @@ export function NavBar() {
         >
           <NamamIcon />
         </a>
+
+        {/* Language toggle */}
+        <button
+          onClick={toggleLang}
+          className="font-serif text-base tracking-wide transition-opacity duration-300 hover:opacity-100 opacity-70"
+          style={{ color: '#d4b066' }}
+          aria-label="Toggle language"
+        >
+          {lang === 'en' ? 'ಕ' : 'E'}
+        </button>
 
         {/* Hamburger — all breakpoints */}
         <button

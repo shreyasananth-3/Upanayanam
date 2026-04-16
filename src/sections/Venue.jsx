@@ -1,8 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { eventData } from '../data/eventData';
+import { useLang } from '../context/LanguageContext';
+import { t } from '../data/translations';
 
 export function Venue() {
+  const { lang } = useLang();
   return (
     <section className="snap-section relative w-full min-h-screen flex items-center justify-center bg-ivory py-20 px-4 md:px-8">
       <div className="max-w-3xl mx-auto w-full text-center space-y-12">
@@ -13,7 +16,7 @@ export function Venue() {
           transition={{ duration: 1 }}
         >
           <h2 className="text-4xl md:text-6xl font-serif font-light text-saffron-950">
-            Join Us
+            {t.joinUs[lang]}
           </h2>
         </motion.div>
 
@@ -40,7 +43,7 @@ export function Venue() {
           </div>
 
           <p className="text-xl text-saffron-500 font-serif font-light">
-            {eventData.date.day}, {eventData.date.date}
+            {t.thursday[lang]}, {eventData.date.date}
           </p>
         </motion.div>
 
@@ -51,7 +54,7 @@ export function Venue() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="text-saffron-950/50 italic text-base leading-relaxed max-w-lg mx-auto"
         >
-          Please arrive by 7:30 AM to join us for breakfast. The Muhurta is at 9:30 and we would appreciate your presence to witness it. Lunch and celebrations at 12:30 PM.
+          {t.venueNote[lang]}
         </motion.p>
 
       </div>

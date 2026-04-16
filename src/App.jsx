@@ -1,6 +1,7 @@
 import './index.css';
 import { Routes, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
+import { LanguageProvider } from './context/LanguageContext';
 import { NavBar } from './components/NavBar';
 import { Hero } from './sections/Hero';
 import { Family } from './sections/Family';
@@ -27,7 +28,7 @@ function HomePage() {
 
 function App() {
   return (
-    <>
+    <LanguageProvider>
       <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -48,7 +49,7 @@ function App() {
           }
         />
       </Routes>
-    </>
+    </LanguageProvider>
   );
 }
 

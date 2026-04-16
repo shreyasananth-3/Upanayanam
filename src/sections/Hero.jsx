@@ -1,5 +1,7 @@
 import React, { useEffect, useState, Suspense } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useLang } from '../context/LanguageContext';
+import { t } from '../data/translations';
 
 const Scene = React.lazy(() => import('../3d/SacredThread'));
 
@@ -58,13 +60,14 @@ export function Hero() {
 		};
 	}, [rmQuery]);
 
+	const { lang } = useLang();
 	const [textReady, setTextReady] = useState(false);
 
 	// Text appears 4s after intro ends (thread 3s + knot 1s)
 	useEffect(() => {
 		if (introDone) {
-			const t = setTimeout(() => setTextReady(true), 1000);
-			return () => clearTimeout(t);
+			const timer = setTimeout(() => setTextReady(true), 1000);
+			return () => clearTimeout(timer);
 		}
 	}, [introDone]);
 
@@ -291,7 +294,7 @@ export function Hero() {
 						{...r(1.2)}
 						animate={aTitle()}
 					>
-						The Sacred Thread Ceremony
+						{t.sacredThreadCeremony[lang]}
 					</motion.p>
 				</div>
 
@@ -306,7 +309,7 @@ export function Hero() {
 							className='uppercase tracking-[0.4em] font-light'
 							style={{ color: 'rgba(180,160,120,0.45)', fontSize: 'clamp(0.55rem, 1.2vw, 0.7rem)' }}
 						>
-							of
+							{t.of[lang]}
 						</span>
 						<h2
 							className='font-serif font-normal leading-none'
@@ -342,7 +345,7 @@ export function Hero() {
 							className='font-normal tracking-wide'
 							style={{ color: '#d4b066', fontSize: 'clamp(0.75rem, 1.8vw, 1rem)' }}
 						>
-							Thursday, April 23, 2026 &nbsp;·&nbsp; Bangalore
+							{t.thursday[lang]}, April 23, 2026 &nbsp;·&nbsp; {t.bangalore[lang]}
 						</p>
 						<a
 							href='https://maps.google.com/?q=Sri+Radhakrishna+Convention+Hall+Gandhi+Bazaar+Basavanagudi+Bangalore'
@@ -373,7 +376,7 @@ export function Hero() {
 								className='uppercase tracking-[0.4em] font-light'
 								style={{ color: 'rgba(212,176,102,0.75)', fontSize: 'clamp(0.55rem, 1.2vw, 0.7rem)' }}
 							>
-								Scroll
+								{t.scroll[lang]}
 							</span>
 							<span style={{ color: 'rgba(212,176,102,0.70)', fontSize: 'clamp(1rem, 1.8vw, 1.15rem)' }}>
 								↓
