@@ -38,12 +38,12 @@ export function Venue() {
               className="text-saffron-950/60 hover:text-saffron-500 transition-colors text-lg leading-relaxed inline-block"
             >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="inline-block w-4 h-4 mr-1 -mt-0.5 opacity-60"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
-              {eventData.venue.address}
+              {t.venueAddress[lang]}
             </a>
           </div>
 
           <p className="text-xl text-saffron-500 font-serif font-light">
-            {t.thursday[lang]}, {eventData.date.date}
+            {t.thursday[lang]}, {t.date[lang]}
           </p>
         </motion.div>
 

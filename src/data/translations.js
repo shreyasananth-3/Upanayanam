@@ -5,6 +5,11 @@ export const t = {
   scroll: { en: 'Scroll', kn: 'ಮುಂದೆ' },
   thursday: { en: 'Thursday', kn: 'ಗುರುವಾರ' },
   bangalore: { en: 'Bangalore', kn: 'ಬೆಂಗಳೂರು' },
+  date: { en: 'April 23, 2026', kn: 'ಏಪ್ರಿಲ್ 23, 2026' },
+  venueAddress: {
+    en: 'No 8, Dattatreya Road, Gandhi Bazaar, Basavanagudi, Bengaluru, Karnataka 560004',
+    kn: 'ನಂ. 8, ದತ್ತಾತ್ರೇಯ ರಸ್ತೆ, ಗಾಂಧಿ ಬಜಾರ್, ಬಸವನಗುಡಿ, ಬೆಂಗಳೂರು 560004',
+  },
 
   // Family
   graceUs: { en: 'Grace Us With Your Presence', kn: 'ನಿಮ್ಮ ಆಶೀರ್ವಾದ ನಮಗೆ ಬೇಕು' },

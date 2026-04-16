@@ -76,27 +76,29 @@ export function NavBar() {
           <NamamIcon />
         </a>
 
-        {/* Language toggle */}
-        <button
-          onClick={toggleLang}
-          className="font-serif text-base tracking-wide transition-opacity duration-300 hover:opacity-100 opacity-70"
-          style={{ color: '#d4b066' }}
-          aria-label="Toggle language"
-        >
-          {lang === 'en' ? 'ಕ' : 'E'}
-        </button>
+        {/* Right side: language toggle + hamburger */}
+        <div className="flex items-center gap-3">
+          <button
+            onClick={toggleLang}
+            className="font-serif text-base tracking-wide transition-opacity duration-300 hover:opacity-100 opacity-70 px-1"
+            style={{ color: '#d4b066' }}
+            aria-label="Toggle language"
+          >
+            {lang === 'en' ? 'ಕ' : 'E'}
+          </button>
 
-        {/* Hamburger — all breakpoints */}
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="flex flex-col justify-center gap-[6px] w-10 h-10 items-center rounded-md"
-          aria-label="Menu"
-          aria-expanded={menuOpen}
-        >
-          <span className={`block h-[2px] w-6 bg-saffron-300 transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-[8px]' : ''}`} />
-          <span className={`block h-[2px] w-6 bg-saffron-300 transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
-          <span className={`block h-[2px] w-6 bg-saffron-300 transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-[8px]' : ''}`} />
-        </button>
+          {/* Hamburger — all breakpoints */}
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="flex flex-col justify-center gap-[6px] w-10 h-10 items-center rounded-md"
+            aria-label="Menu"
+            aria-expanded={menuOpen}
+          >
+            <span className={`block h-[2px] w-6 bg-saffron-300 transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-[8px]' : ''}`} />
+            <span className={`block h-[2px] w-6 bg-saffron-300 transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
+            <span className={`block h-[2px] w-6 bg-saffron-300 transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-[8px]' : ''}`} />
+          </button>
+        </div>
       </nav>
 
       {/* Fullscreen overlay — all breakpoints, z-60 to cover nav */}

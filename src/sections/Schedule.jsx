@@ -33,7 +33,7 @@ export function Schedule() {
             {t.theSacredDay[lang]}
           </h2>
           <p className="text-xl text-saffron-950/50 font-light">
-            {t.thursday[lang]}, {eventData.date.date}
+            {t.thursday[lang]}, {t.date[lang]}
           </p>
         </motion.div>
 

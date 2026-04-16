@@ -345,7 +345,7 @@ export function Hero() {
 							className='font-normal tracking-wide'
 							style={{ color: '#d4b066', fontSize: 'clamp(0.75rem, 1.8vw, 1rem)' }}
 						>
-							{t.thursday[lang]}, April 23, 2026 &nbsp;·&nbsp; {t.bangalore[lang]}
+							{t.thursday[lang]}, {t.date[lang]} &nbsp;·&nbsp; {t.bangalore[lang]}
 						</p>
 						<a
 							href='https://maps.google.com/?q=Sri+Radhakrishna+Convention+Hall+Gandhi+Bazaar+Basavanagudi+Bangalore'
