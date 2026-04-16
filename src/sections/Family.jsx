@@ -41,7 +41,7 @@ export function Family() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-center space-y-3"
         >
-          <p className="text-sm uppercase tracking-[0.3em] text-saffron-400/50">{t.parents[lang]}</p>
+          <p className={`text-sm text-saffron-400/50 ${lang === 'en' ? 'uppercase tracking-[0.3em]' : 'tracking-normal'}`}>{t.parents[lang]}</p>
           <p className="text-2xl font-serif font-light text-saffron-300">
             {eventData.family.parents.map(p => p.name).join(' & ')}
           </p>
@@ -55,7 +55,7 @@ export function Family() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-center space-y-3"
         >
-          <p className="text-sm uppercase tracking-[0.3em] text-saffron-400/50">{t.blessedBy[lang]}</p>
+          <p className={`text-sm text-saffron-400/50 ${lang === 'en' ? 'uppercase tracking-[0.3em]' : 'tracking-normal'}`}>{t.blessedBy[lang]}</p>
           <p className="text-xl font-serif font-light text-saffron-100/80">
             {eventData.family.grandparents.map(g => g.name).join(' & ')}
           </p>
@@ -79,7 +79,7 @@ export function Family() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="text-center space-y-3"
         >
-          <p className="text-sm uppercase tracking-[0.3em] text-saffron-400/50">{t.withLove[lang]}</p>
+          <p className={`text-sm text-saffron-400/50 ${lang === 'en' ? 'uppercase tracking-[0.3em]' : 'tracking-normal'}`}>{t.withLove[lang]}</p>
           {eventData.family.relatives.map((r, i) => (
             <p key={i} className="text-lg font-serif font-light text-saffron-100/70">{r.name}</p>
           ))}
