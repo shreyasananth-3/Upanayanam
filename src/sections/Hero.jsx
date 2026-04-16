@@ -355,7 +355,7 @@ export function Hero() {
 							style={{ color: 'rgba(212,190,140,0.55)', fontSize: 'clamp(0.8rem, 1.6vw, 0.875rem)' }}
 						>
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="inline-block w-3 h-3 mr-1 -mt-0.5 opacity-70"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
-							Sri Radhakrishna Convention Hall, Gandhi Bazaar, Basavanagudi
+							{lang === 'kn' ? 'ಶ್ರೀ ರಾಧಾಕೃಷ್ಣ ಕನ್ವೆನ್ಷನ್ ಹಾಲ್, ಗಾಂಧಿ ಬಜಾರ್, ಬಸವನಗುಡಿ' : 'Sri Radhakrishna Convention Hall, Gandhi Bazaar, Basavanagudi'}
 						</a>
 					</motion.div>
 
