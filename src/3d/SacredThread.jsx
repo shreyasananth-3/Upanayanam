@@ -143,18 +143,19 @@ function addTubularAttr(geo, tubSegs, radSegs) {
 /* ── Shared akshara data ── */
 
 const ORBIT_AKSHARAS = [
-	{ text: 'ॐ',          angle: 90  },
-	{ text: 'भूः',        angle: 60  },
-	{ text: 'भुवः',       angle: 30  },
-	{ text: 'स्वः',       angle: 0   },
-	{ text: 'तत्',        angle: 330 },
-	{ text: 'सवितुर्',    angle: 300 },
-	{ text: 'वरेण्यं',    angle: 270 },
-	{ text: 'भर्गो',      angle: 240 },
-	{ text: 'देवस्य',     angle: 210 },
-	{ text: 'धीमहि',      angle: 180 },
-	{ text: 'धियो',       angle: 150 },
-	{ text: 'प्रचोदयात्', angle: 120 },
+	{ text: 'ॐ',          angle: 90   },
+	{ text: 'भूः',        angle: 62   },
+	{ text: 'भुवः',       angle: 34   },
+	{ text: 'स्वः',       angle: 6    },
+	{ text: 'तत्',        angle: 338  },
+	{ text: 'सवितुर्',    angle: 310  },
+	{ text: 'वरेण्यं',    angle: 282  },
+	{ text: 'भर्गो',      angle: 254  },
+	{ text: 'देवस्य',     angle: 226  },
+	{ text: 'धीमहि',      angle: 198  },
+	{ text: 'धियो',       angle: 170  },
+	{ text: 'यो नः',      angle: 142  },
+	{ text: 'प्रचोदयात्', angle: 114  },
 ];
 
 /* ── Per-breakpoint config ── */
